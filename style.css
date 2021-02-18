@@ -3,16 +3,33 @@
     margin: 0;
 }
 
+/*---- FONTS ----*/
+
+/* font-family: 'Poppins', sans-serif; */
+
 img {
     height: 200px;
     object-fit: cover;
 }
 
+h1{
+   font-family: 'Poppins', sans-serif;
+}
+
 h2 {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-bottom: 1vw;
-    text-shadow: 3px 3px 10px red;
+    text-shadow: 3px 3px 10px #0202c1;
     font-size: 1.2rem;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
@@ -58,7 +75,7 @@ main {
 }
 
 article {
-    background-color: rgb(65, 105, 225, 0.5);
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
