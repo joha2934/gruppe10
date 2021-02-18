@@ -14,14 +14,24 @@ img {
 
 h1{
    font-family: 'Poppins', sans-serif;
+    margin-left: 1vw;
 }
 
 h2 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-bottom: 1vw;
+    padding-top: 1vw;
     text-shadow: 3px 3px 10px #0202c1;
     font-size: 1.2rem;
+}
+header h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    text-shadow: 3px 3px 10px #0202c1;
+    font-size: 2rem;
 }
 
 h3{
@@ -33,6 +43,7 @@ p {
 }
 
 nav {
+    font-family: 'Poppins', sans-serif;
     padding-top: 1vw;
     display: flex;
     flex-direction: row;
@@ -81,6 +92,8 @@ article {
     justify-content: space-between;
     border: 2px solid black;
     border-radius: 5px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 
 @media only screen and (min-width: 768px) {
