@@ -4,66 +4,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Havets Skabninger</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        nav {
-            padding-top: 1vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            background-color: black;
-            position: fixed;
-            width: 100%;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            column-gap: 20px;
-            grid-row-gap: 20px;
-            margin: 0 auto;
-        }
-
-        article {
-            background-color: rgb(65, 105, 225, 0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 2px solid black;
-            border-radius: 5px;
-        }
-
-
-
-    </style>
 
 </head>
 
 <body>
   <header>
+        <nav>
+           <div id="menuknap">☰</div>
+			<div id="menu" class="hidden">
+           <li>
+            <button class="Hjem">Hjem</button>
+            <button class="Om os">Om os</button>
+            <button class="Udforsk">Udforsk</button>
+            <button class="Kontakt">Kontakt</button>
+            </li>
+            </div>
+        </nav>
+       <h2>Havets Skabninger</h2>
+    </header>
+
+<h1>Alle</h1>
+
+    <main id="liste">
         <nav class="navigation">
+           <h3>Filtrér</h3>
             <button data-kategori="alle" class="valgt">Alle</button>
             <button data-kategori="forretter">Forretter</button>
             <button data-kategori="hovedretter">Hovedretter</button>
             <button data-kategori="desserter">Desserter</button>
             <button data-kategori="drikkevarer">Drikkevarer</button>
         </nav>
-        <h2>Bistro Babushka</h2>
-    </header>
-
-<h1>Alle</h1>
-
-    <main id="liste">
       <section id=retter>
        <template>
            <article class="the_shadow ret">
