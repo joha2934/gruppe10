@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havets Skabninger</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        nav {
+            padding-top: 1vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 20px;
+            grid-row-gap: 20px;
+            margin: 0 auto;
+        }
+
+        article {
+            background-color: rgb(65, 105, 225, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+  <header>
+        <nav class="navigation">
+            <button data-kategori="alle" class="valgt">Alle</button>
+            <button data-kategori="forretter">Forretter</button>
+            <button data-kategori="hovedretter">Hovedretter</button>
+            <button data-kategori="desserter">Desserter</button>
+            <button data-kategori="drikkevarer">Drikkevarer</button>
+        </nav>
+        <h2>Bistro Babushka</h2>
+    </header>
+
+<h1>Alle</h1>
+
+    <main id="liste">
+      <section id=retter>
+       <template>
+           <article class="the_shadow ret">
+               <img src="" alt="" class="billede">
+               <h2 class="navn"></h2>
+               <p class="kortbeskrivelse"></p>
+               <h3 class="pris"></h3>
+           </article>
+       </template>
+       </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src=""></script>
+</body>
+</html>
