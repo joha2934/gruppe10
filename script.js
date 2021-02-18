@@ -69,7 +69,7 @@ async function hentData() {
 }
 
 
-const dest = document.querySelector("#liste");
+const dest = document.querySelector("#retter");
 const skabelon = document.querySelector("template").content;
 
 
