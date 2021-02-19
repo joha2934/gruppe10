@@ -76,11 +76,11 @@ function visFiske() {
     dest.textContent = "";
     fiske.forEach(fisk => {
         console.log("kategori", fisk);
-        if (filter == fisk.Levested || filter == "alle") {
+        if (filter == fisk.levested || filter == "alle") {
             const klon = skabelon.cloneNode("true");
-            klon.querySelector(".billede").src = medieurl + fisk.Billede;
+            klon.querySelector(".billede").src = medieurl + fisk.billede;
             klon.querySelector(".art").textContent = fisk.art;
-            klon.querySelector(".kortbeskrivelse").textContent = fisk.KortBeskrivelse;
+            klon.querySelector(".kortbeskrivelse").textContent = fisk.kortbeskrivelse;
             //            klon.querySelector(".pris").textContent = fisk.pris + ",-";
             klon.querySelector(".fisk").addEventListener("click", () => visDetaljer(fisk));
             dest.appendChild(klon);
