@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dybet Aquarium</title>
+    <title>Dybet Akvarium</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,8 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="img/fav_icon32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/fav_icon16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon16x16.png">
 
     <link rel="stylesheet" href="">
 
@@ -113,49 +113,51 @@
 
 <body>
     <main id="liste">
-          <h1>Dybet Aquarium</h1>
-           <article class="the_shadow ret">
+          <h1>Dybet Akvarium</h1>
+<!--           <article class="the_shadow fisk">-->
                <img src="" alt="" class="billede">
-               <h2 class="navn"></h2>
-               <p class="kategori"></p>
+               <h2 class="art"></h2>
+               <p class="videnskabeligtnavn"></p>
+               <p class="levested"></p>
+               <p class="størrelse"></p>
+               <p class="kortbeskrivelse"></p>
                <p class="langbeskrivelse"></p>
-               <p class="oprindelsesregion"></p>
-               <h3 class="pris"></h3>
-           </article>
+<!--           </article>-->
            <button class="tilbage">Tilbage</button>
     </main>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
 
-        const medieurl = "https://babushka-dd8a.restdb.io/media/";
+        const medieurl = "https://fiskfisk-2fc1.restdb.io/media/";
 
-        let mad;
+        let fiske;
 
         const myHeaders = {
-            "x-apikey": "600ec2fb1346a1524ff12de4"
+            "x-apikey": "602e97ac5ad3610fb5bb6361"
             }
 
         console.log("ID", id);
-        document.addEventListener("DOMContentLoaded", loadJSON)
+        document.addEventListener("DOMContentLoaded", hentData)
 
-        async function loadJSON(){
-            const JSONData = await fetch(`https://babushka-dd8a.restdb.io/rest/menu/${id}`,{
+        async function hentData(){
+            const JSONData = await fetch("https://fiskfisk-2fc1.restdb.io/rest/fisk",{
                 headers: myHeaders
             });
 
-        mad = await JSONData.json();
-        console.log("Mad", mad);
-        visMad(mad);
+        fiske = await JSONData.json();
+        console.log("Fisk", fiske);
+        visFiske();
         }
 
-        function visMad(){
-            document.querySelector(".billede").src = medieurl + mad.billede;
-            document.querySelector(".navn").textContent = mad.navn;
-//            document.querySelector(".kategori").textContent = mad.kategori;
-            document.querySelector(".langbeskrivelse").textContent = mad.langbeskrivelse;
-            document.querySelector(".oprindelsesregion").textContent = "Region: " + mad.oprindelsesregion;
-            document.querySelector(".pris").textContent = mad.pris + ",-";
+        function visFiske(){
+            document.querySelector(".billede").src = medieurl + fisk.billede;
+            document.querySelector(".art").textContent = fisk.art;
+            document.querySelector(".videnskabeligtnavn").textContent = fisk.videnskabeligtnavn;
+            document.querySelector(".levested").textContent = fisk.levested;
+            document.querySelector(".størrelse").textContent = fisk.størrelse;
+            document.querySelector(".kortbeskrivelse").textContent = fisk.kortbeskrivelse;
+            document.querySelector(".langbeskrivelse").textContent = fisk.langbeskrivelse;
             document.querySelector("button").addEventListener("click", tilbageTilForsiden);
         }
 
