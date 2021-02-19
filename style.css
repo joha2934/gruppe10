@@ -44,6 +44,10 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+a:hover {
+    border: solid 1px black;
+}
+
  #section_two nav {
     font-family: 'Poppins', sans-serif;
     padding-top: 1vw;
