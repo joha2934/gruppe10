@@ -49,7 +49,7 @@ function start() {
 }
 
 function filtrerFisk() {
-    filter = this.dataset.kategori;
+    filter = this.dataset.levested;
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
 
@@ -75,7 +75,7 @@ const skabelon = document.querySelector("template").content;
 function visFiske() {
     dest.textContent = "";
     fiske.forEach(fisk => {
-        console.log("kategori", fisk);
+        console.log("levested", fisk);
         if (filter == fisk.levested || filter == "alle") {
             const klon = skabelon.cloneNode("true");
             klon.querySelector(".fisk").src = medieurl + fisk.billede;
