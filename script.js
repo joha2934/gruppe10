@@ -75,10 +75,8 @@ const skabelon = document.querySelector("template").content;
 function visFiske() {
     dest.textContent = "";
     fiske.forEach(fisk => {
-<<<<<<< HEAD
 
-=======
->>>>>>> Tobias
+
         console.log("levested", fisk);
         if (filter == fisk.levested || filter == "alle") {
             const klon = skabelon.cloneNode("true");
