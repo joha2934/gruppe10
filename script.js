@@ -80,6 +80,7 @@ function visFiske() {
         if (filter == fisk.levested || filter == "alle") {
             const klon = skabelon.cloneNode("true");
             klon.querySelector(".fisk").src = medieurl + fisk.billede;
+            klon.querySelector(".navn").textContent = fisk.art;
             klon.querySelector(".fisk").addEventListener("click", () => visDetaljer(fisk));
             dest.appendChild(klon);
         }

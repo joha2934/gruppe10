@@ -123,6 +123,9 @@ article {
             /*position: web-kit;*/
             top: 0;
         }
+    .filtrering {
+        padding-bottom: 3vw;
+    }
 }
 
 
