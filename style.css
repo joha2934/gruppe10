@@ -3,29 +3,49 @@
     margin: 0;
 }
 
-img {
+/*---- FONTS ----*/
+
+/* font-family: 'Poppins', sans-serif; */
+
+article .fisk {
     height: 200px;
     object-fit: cover;
 }
 
+article .bobbel
+
+h1{
+   font-family: 'Poppins', sans-serif;
+    margin-left: 1vw;
+}
+
 h2 {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-bottom: 1vw;
-    text-shadow: 3px 3px 10px red;
+    padding-top: 1vw;
+    text-shadow: 3px 3px 10px #0202c1;
     font-size: 1.2rem;
 }
-
-nav {
+header h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-bottom: 1vw;
     padding-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-   /* background-color: black;*/
-    position: fixed;
-    width: 100%;
+    text-shadow: 3px 3px 10px #0202c1;
+    font-size: 2rem;
 }
 
-.filtrering {
+h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+ #section_two nav {
+    font-family: 'Poppins', sans-serif;
     padding-top: 1vw;
     display: flex;
     flex-direction: row;
@@ -35,12 +55,11 @@ nav {
     width: 100%;
 }
 #menuknap {
-    display: inline-block;
     cursor: pointer;
     font-size: 3em;
-    float: right;
     padding-right: 10px;
     padding-top: 10px;
+    text-align: right;
 }
 
 #menuknap:hover {
@@ -49,9 +68,11 @@ nav {
 
 #menu {
     list-style-type: none;
-    transition: transform 3s;
-    transform-origin: top left;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
 }
 
 .hidden {
@@ -63,8 +84,15 @@ main {
 
 }
 
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left 10px;
+}
 
-#retter {
+
+#section_two {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     column-gap: 20px;
@@ -73,12 +101,14 @@ main {
 }
 
 article {
-    background-color: rgb(65, 105, 225, 0.5);
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid black;
     border-radius: 5px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -89,22 +119,11 @@ article {
         #menu {
             transform: translateX(0);
             display: contents;
-            position: sticky;
+            position: fixed;
             /*position: web-kit;*/
             top: 0;
         }
-        #menu li {
-                display: inline-block;
-                position: sticky;
-                top: 0;
-        }
 }
-
-
-
-
-
-
 
 
 

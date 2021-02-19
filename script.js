@@ -1,4 +1,3 @@
-
 window.addEventListener("load", sidenVises);
 
 function sidenVises() {
@@ -30,20 +29,20 @@ function toggleMenu() {
 
 
 
-document.addEventListener("DOMContentLoaded", start)
+document.addEventListener("DOMContentLoaded", start);
 const header = document.querySelector("h1");
-const medieurl = "https://babushka-dd8a.restdb.io/media/";
+const medieurl = "https://fiskfisk-2fc1.restdb.io/media/";
 const myHeaders = {
-    'x-apikey': "600ec2fb1346a1524ff12de4"
+    'x-apikey': "602e97ac5ad3610fb5bb6361"
 };
 
 
 let filter = "alle";
-let fisk;
+let fiske;
 
 
 function start() {
-    const filterKnapper = document.querySelectorAll("nav button");
+    const filterKnapper = document.querySelectorAll(".filtrering button");
     console.log(filterKnapper);
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerFisk));
     hentData();
@@ -54,36 +53,33 @@ function filtrerFisk() {
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
 
-    visFisk();
+    visFiske();
     header.textContent = this.textContent;
 }
 
 
 async function hentData() {
-    const JSONData = await fetch("https://babushka-dd8a.restdb.io/rest/menu", {
+    const JSONData = await fetch("https://fiskfisk-2fc1.restdb.io/rest/fisk", {
         headers: myHeaders
     });
-    fisk = await JSONData.json();
-    console.log("Fisk", fisk);
-    visFisk();
+    fiske = await JSONData.json();
+    console.log("Fisk", fiske);
+    visFiske();
 }
 
 
-const dest = document.querySelector("#retter");
+const dest = document.querySelector("#section_two");
 const skabelon = document.querySelector("template").content;
 
 
-function visFisk() {
+function visFiske() {
     dest.textContent = "";
-    fisk.forEach(menu => {
-        console.log("kategori", menu.kategori)
-        if (filter == menu.kategori || filter == "alle") {
+    fiske.forEach(fisk => {
+        console.log("kategori", fisk);
+        if (filter == fisk.levested || filter == "alle") {
             const klon = skabelon.cloneNode("true");
-            klon.querySelector(".billede").src = medieurl + menu.billede;
-            klon.querySelector(".navn").textContent = menu.navn;
-            klon.querySelector(".kortbeskrivelse").textContent = menu.kortbeskrivelse;
-            klon.querySelector(".pris").textContent = menu.pris + ",-";
-            klon.querySelector(".ret").addEventListener("click", () => visDetaljer(menu));
+            klon.querySelector(".fisk").src = medieurl + fisk.billede;
+            klon.querySelector(".fisk").addEventListener("click", () => visDetaljer(fisk));
             dest.appendChild(klon);
         }
     })

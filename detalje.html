@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dybet Akvarium</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon16x16.png">
+
+    <link rel="stylesheet" href="">
+
+    <style>
+         img {
+            width: 90%;
+            height: 60%;
+            margin: 0 auto;
+            display: block;
+            border: solid 1px black;
+            border-radius: 10px;
+            margin-top: 3vw;
+        }
+
+        article {
+            border: solid 1px black;
+            border-radius: 10px;
+        }
+
+
+        main {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        h1 {
+            color: black;
+            margin-top: 1vw;
+            margin-left: 1vw;
+            margin-bottom: 1.5vw;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 3px 3px 10px blue;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            padding-bottom: 1vw;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 3px 3px 10px blue;
+            font-size: 1rem;
+        }
+
+        h3 {
+            padding-left: 2vw;
+            font-size: 1rem;
+        }
+
+        p {
+            padding-left: 0.3vw;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            padding-bottom: 1.5vw;
+
+        }
+        button {
+            margin-top: 2vw;
+            margin-bottom: 1vw;
+            margin-left: 2vw;
+            margin-right: 2vw;
+            color: black;
+            border-radius: 10px;
+            padding: 0.5vw 0.5vw;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+        }
+
+        article  {
+            background-color: aliceblue;
+        }
+
+        footer {
+            padding-top: 3vw;
+        }
+        footer img {
+            width: 1%;
+            height: 1%;
+        }
+        footer h2 {
+            font-size: 0.2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main id="liste">
+          <h1>Dybet Akvarium</h1>
+           <article class="the_shadow fisk">
+               <img src="" alt="" class="billede">
+               <h2 class="art"></h2>
+               <p class="videnskabeligtnavn"></p>
+               <p class="levested"></p>
+               <p class="størrelse"></p>
+               <p class="kortbeskrivelse"></p>
+               <p class="langbeskrivelse"></p>
+           </article>
+           <button class="tilbage">Tilbage</button>
+    </main>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        const medieurl = "https://fiskfisk-2fc1.restdb.io/media/";
+
+        let fiske;
+
+        const myHeaders = {
+            "x-apikey": "602e97ac5ad3610fb5bb6361"
+            }
+
+        console.log("ID", id);
+        document.addEventListener("DOMContentLoaded", hentData)
+
+        async function hentData() {
+    const JSONData = await fetch(`https://fiskfisk-2fc1.restdb.io/rest/fisk/${id}`, {
+        headers: myHeaders
+    });
+    fiske = await JSONData.json();
+    console.log("Fisk", fiske);
+    visFiske(fiske);
+}
+
+        function visFiske(){
+            console.log("levested", fiske);
+            document.querySelector(".billede").src = medieurl + fiske.billede;
+            document.querySelector(".art").textContent = fiske.art;
+            document.querySelector(".videnskabeligtnavn").textContent = fiske.videnskabeligtnavn;
+            document.querySelector(".levested").textContent = fiske.levested;
+            document.querySelector(".størrelse").textContent = fiske.størrelse;
+            document.querySelector(".kortbeskrivelse").textContent = fiske.kortbeskrivelse;
+            document.querySelector(".langbeskrivelse").textContent = fiske.langbeskrivelse;
+            document.querySelector("button").addEventListener("click", tilbageTilForsiden);
+        }
+
+        function tilbageTilForsiden(){
+            history.back();
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

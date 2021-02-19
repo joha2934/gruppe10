@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dybet Aquarium</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon16x16.png">
+    <title>Dybet Akvarium</title>
     <link rel="stylesheet" href="style.css">
 
 
 </head>
 
 <body>
-  <header>
+    <header>
+      <section id="section_header">
+       <img id="logo">
         <nav>
-           <div id="menuknap">☰</div>
-			<div id="menu" class="hidden">
-           <li>
-            <button class="Hjem">Hjem</button>
-            <button class="Om os">Om os</button>
-            <button class="Udforsk">Udforsk</button>
-            <button class="Kontakt">Kontakt</button>
-            </li>
+            <div id="menuknap">☰</div>
+            <div id="menu" class="hidden">
+                    <a href="index.html" class="Hjem">Hjem</a>
+                    <a href="#" class="Om os">Om os</a>
+                    <a href="#" class="Udforsk">Udforsk</a>
+                    <a href="#" class="Kontakt">Kontakt</a>
             </div>
         </nav>
-       <h2>Dybet Aquarium</h2>
+        <h2>Dybet Akvarium</h2>
+        </section>
     </header>
 
-<h1>Alle</h1>
-
     <main id="liste">
+
        <section id="section_one">
-        <nav class="filtrering">
+          <h1>Alle</h1>
            <h3>Filtrér</h3>
+        <nav class="filtrering">
             <button data-kategori="alle" class="valgt">Alle</button>
-            <button data-kategori="forretter">Forretter</button>
-            <button data-kategori="hovedretter">Hovedretter</button>
-            <button data-kategori="desserter">Desserter</button>
-            <button data-kategori="drikkevarer">Drikkevarer</button>
+            <button data-kategori="art">Art</button>
+            <button data-kategori="videnskabeligtnavn">Videnskabeligt navn</button>
+            <button data-kategori="levested">Levested</button>
+            <button data-kategori="størrelse">Størrelse</button>
+            <button data-kategori="kortbeskrivelse">Kort beskrivelse</button>
+            <button data-kategori="langbeskrivelse">Lang beskrivelse</button>
         </nav>
         </section>
-      <section id=retter>
+      <section id=section_two>
        <template>
-           <article class="the_shadow ret">
-               <img src="" alt="" class="billede">
+           <article>
+               <img src="" alt="" class="fisk">
+               <img src="" alt="" class="bobbel">
                <h2 class="navn"></h2>
-               <p class="kortbeskrivelse"></p>
-               <h3 class="pris"></h3>
            </article>
        </template>
        </section>
-       </main>
+        <section id=fiske>
+            <template>
+                <article class="fisk">
+                    <img src="" alt="" class="billede">
+                    <h2 class="art"></h2>
+                    <h3 class="videnskabeligtnavn"></h3>
+
+                </article>
+            </template>
+        </section>
+    </main>
+
 
     <script src="script.js"></script>
-</body>
-</html>
+</body></html>
