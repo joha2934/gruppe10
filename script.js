@@ -80,8 +80,6 @@ function visFiske() {
             const klon = skabelon.cloneNode("true");
             klon.querySelector(".billede").src = medieurl + fisk.billede;
             klon.querySelector(".art").textContent = fisk.art;
-            klon.querySelector(".kortbeskrivelse").textContent = fisk.kortbeskrivelse;
-            //            klon.querySelector(".pris").textContent = fisk.pris + ",-";
             klon.querySelector(".fisk").addEventListener("click", () => visDetaljer(fisk));
             dest.appendChild(klon);
         }
