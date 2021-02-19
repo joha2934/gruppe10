@@ -42,7 +42,7 @@ let fiske;
 
 
 function start() {
-    const filterKnapper = document.querySelectorAll(".kategori button");
+    const filterKnapper = document.querySelectorAll(".filtrering button");
     console.log(filterKnapper);
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerFisk));
     hentData();
@@ -68,7 +68,7 @@ async function hentData() {
 }
 
 
-const dest = document.querySelector("#liste");
+const dest = document.querySelector("#section_two");
 const skabelon = document.querySelector("template").content;
 
 
@@ -78,8 +78,7 @@ function visFiske() {
         console.log("kategori", fisk);
         if (filter == fisk.levested || filter == "alle") {
             const klon = skabelon.cloneNode("true");
-            klon.querySelector(".billede").src = medieurl + fisk.billede;
-            klon.querySelector(".art").textContent = fisk.art;
+            klon.querySelector(".fisk").src = medieurl + fisk.billede;
             klon.querySelector(".fisk").addEventListener("click", () => visDetaljer(fisk));
             dest.appendChild(klon);
         }
