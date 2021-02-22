@@ -3,58 +3,127 @@
     margin: 0;
 }
 
-header {
-    background-image: url(billeder/splash.jpg);
-    background-size: cover;
+body {
+    font-family: 'Poppins', sans-serif;
 }
+
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 
 /*---- FONTS ----*/
 
+h1 {
+    text-align: center;
+    color: white;
+        text-shadow: none;
+        position: relative;
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 2rem;
+    top: 35vh;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    font-size: 1.2rem;
+}
+
+h3 {
+}
+
+p {
+}
+
+button {
+    border: none;
+    background: none;
+
+}
+
 /* font-family: 'Poppins', sans-serif; */
+
+
+
+/* ----- Header ----- */
+header {
+    background-image: url(billeder/splash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 80vh
+}
+
+header a {
+      color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+
+  header #menu a:last-child {
+    border: 3px solid #FEB835;
+    position: relative;
+    padding: 7px;
+
+}
+
+
+#menu {
+    list-style-type: none;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    text-align: right;
+   position: absolute;
+    right: 2rem;
+    top: 5rem;
+
+}
+
+.hidden {
+    display: none;
+    transform: scale(0);
+}
+
+
+ #menuknap {
+     cursor: pointer;
+    font-size: 3em;
+    height: 4rem;
+     width: 4rem;
+     top: 1rem;
+     right: 1rem;
+     color: white;
+     z-index: 1;
+     float: right;
+         position: absolute;
+}
+
+
+
+
+
+/* ----- section 2 -------*/
 
 article .fisk {
     height: 200px;
     object-fit: cover;
 }
 
-article .bobbel h1 {
-    font-family: 'Poppins', sans-serif;
+article .bobbel h2 {
     margin-left: 1vw;
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding-bottom: 1vw;
-    padding-top: 1vw;
-    text-shadow: 3px 3px 10px #0202c1;
-    font-size: 1.2rem;
-}
-
-header h2 {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding-bottom: 1vw;
-    padding-top: 1vw;
-    text-shadow: 3px 3px 10px #0202c1;
-    font-size: 2rem;
-}
-
-h3 {
-    font-family: 'Poppins', sans-serif;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-}
-
-a:hover {
-    border: solid 1px black;
-}
 
 #section_two nav {
     font-family: 'Poppins', sans-serif;
@@ -67,40 +136,6 @@ a:hover {
     width: 100%;
 }
 
-#menuknap {
-    cursor: pointer;
-    font-size: 3em;
-    padding-right: 10px;
-    padding-top: 10px;
-    text-align: right;
-}
-
-#menuknap:hover {
-    color: #5F0909;
-}
-
-#menu {
-    list-style-type: none;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-
-}
-
-.hidden {
-    display: none;
-    transform: scale(0);
-}
-
-main {}
-
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-right: 10px;
-    padding-left 10px;
-}
 
 
 #section_two {
@@ -116,8 +151,6 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid black;
-    border-radius: 5px;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
 }
@@ -139,7 +172,25 @@ article {
 }
 
 
+/* ------- footer ------ */
+
+
+
+
+/* ----- Style for Desktop ------ */
+
 @media only screen and (min-width: 800px) {
+
+    h1 {
+        top: 25vh;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    b {
+        letter-spacing: -0.6rem;
+    }
+
     #menuknap {
         display: none;
     }
@@ -152,12 +203,45 @@ article {
         /*position: web-kit;*/
         top: 0;
         flex-direction: row;
+        z-index: 1;
 
     }
+
+     header #menu a:last-child {
+    top: -10px;
+    margin-left: 0.5rem;
+
+}
 
     #menu a {
-        padding: 0px 5px 0px 5px;
+        padding: 0px 10px 0px 10px;
+        width: auto;
+        font-size: 1rem;
+        line-height: inherit;
     }
+
+    #menu a:hover {
+        opacity: 0.7;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+
+
+    header nav {
+        position: inherit;
+        width: auto;
+        height: auto;
+        top: inherit;
+        right: inherit;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+
 
 
 }
