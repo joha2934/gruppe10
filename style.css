@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-body {
+header {
     background-image: url(billeder/splash.jpg);
     background-size: cover;
 }

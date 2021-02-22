@@ -22,6 +22,7 @@ function toggleMenu() {
         document.querySelector("#menuknap").textContent = "✕";
         document.querySelector("#menu").classList.remove("hidden");
     }
+
 }
 
 
