@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+body {
+    background-image: url(billeder/splash.jpg);
+    background-size: cover;
+}
+
 /*---- FONTS ----*/
 
 /* font-family: 'Poppins', sans-serif; */
@@ -12,11 +17,13 @@ article .fisk {
     object-fit: cover;
 }
 
-article .bobbel
-
-h1{
-   font-family: 'Poppins', sans-serif;
+article .bobbel h1 {
+    font-family: 'Poppins', sans-serif;
     margin-left: 1vw;
+}
+
+h1 {
+    text-align: center;
 }
 
 h2 {
@@ -27,7 +34,8 @@ h2 {
     text-shadow: 3px 3px 10px #0202c1;
     font-size: 1.2rem;
 }
-header h2{
+
+header h2 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-bottom: 1vw;
@@ -36,7 +44,7 @@ header h2{
     font-size: 2rem;
 }
 
-h3{
+h3 {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -48,16 +56,17 @@ a:hover {
     border: solid 1px black;
 }
 
- #section_two nav {
+#section_two nav {
     font-family: 'Poppins', sans-serif;
     padding-top: 1vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-   /* background-color: black;*/
+    /* background-color: black;*/
     position: inherit;
     width: 100%;
 }
+
 #menuknap {
     cursor: pointer;
     font-size: 3em;
@@ -84,9 +93,7 @@ a:hover {
     transform: scale(0);
 }
 
-main {
-
-}
+main {}
 
 section {
     max-width: 1200px;
@@ -115,23 +122,42 @@ article {
     margin-right: 0.5vw;
 }
 
-@media only screen and (min-width: 768px) {
-    #menuknap {
-            display: none;
-        }
+.filtrering {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
 
-        #menu {
-            transform: translateX(0);
-            display: contents;
-            position: fixed;
-            /*position: web-kit;*/
-            top: 0;
-        }
-    .filtrering {
-        padding-bottom: 3vw;
-    }
+
+}
+
+.filtrering button {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
+@media only screen and (min-width: 800px) {
+    #menuknap {
+        display: none;
+    }
+
+    #menu {
+        transform: translateX(0);
+        display: flex;
+        position: inherit;
+        justify-content: flex-end;
+        /*position: web-kit;*/
+        top: 0;
+        flex-direction: row;
+
+    }
+
+    #menu a {
+        padding: 0px 5px 0px 5px;
+    }
 
 
+}
