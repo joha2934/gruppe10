@@ -41,12 +41,6 @@ h3 {
 p {
 }
 
-button {
-    border: none;
-    background: none;
-
-}
-
 /* font-family: 'Poppins', sans-serif; */
 
 
@@ -58,6 +52,16 @@ header {
     background-repeat: no-repeat;
     position: relative;
     height: 80vh
+}
+
+#section_header {
+    display: flex;
+    position: relative;
+
+}
+
+#logo {
+    width: 15rem;
 }
 
 header a {
@@ -135,7 +139,11 @@ article .bobbel h2 {
     position: inherit;
     width: 100%;
 }
+button {
+    border: none;
+    background: none;
 
+}
 
 
 #section_two {
@@ -225,19 +233,22 @@ article {
     }
 
     header {
-        height: 100vh;
+        height: 110vh;
     }
 
 
 
     header nav {
-        position: inherit;
+        position: absolute;
         width: auto;
         height: auto;
         top: inherit;
         right: inherit;
         display: flex;
         justify-content: flex-end;
+        right: 0;
+        width: 100%;
+        top: 2rem;
     }
 
 

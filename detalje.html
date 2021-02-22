@@ -153,11 +153,11 @@
             console.log("levested", fiske);
             document.querySelector(".billede").src = medieurl + fiske.billede;
             document.querySelector(".art").textContent = fiske.art;
-            document.querySelector(".videnskabeligtnavn").textContent = fiske.videnskabeligtnavn;
-            document.querySelector(".levested").textContent = fiske.levested;
-            document.querySelector(".størrelse").textContent = fiske.størrelse;
+            document.querySelector(".videnskabeligtnavn").textContent = "Videnskabeligt navn: "+ fiske.videnskabeligtnavn;
+            document.querySelector(".levested").textContent = "Levested: "+ fiske.levested;
+            document.querySelector(".størrelse").textContent = "Størrelse: "+ fiske.størrelse;
             document.querySelector(".kortbeskrivelse").textContent = fiske.kortbeskrivelse;
-            document.querySelector(".langbeskrivelse").textContent = fiske.langbeskrivelse;
+            document.querySelector(".langbeskrivelse").textContent ="Beskrivelse: "+ fiske.langbeskrivelse;
             document.querySelector("button").addEventListener("click", tilbageTilForsiden);
         }
 
