@@ -145,6 +145,10 @@ article .bobbel h2 {
     margin-left: 1vw;
 }
 
+article:hover {
+    cursor: pointer;
+}
+
 #section_two img {
     width: auto;
     height: 100%;
@@ -174,7 +178,7 @@ article .bobbel h2 {
 button {
     border: none;
     background: none;
-
+    cursor: pointer;
 }
 
 
@@ -314,6 +318,8 @@ article {
 
         font-size: 18vw;
     }
+
+
 
 
 
