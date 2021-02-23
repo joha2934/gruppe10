@@ -247,7 +247,7 @@ article {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
 }
 
 #section_three h2 {
@@ -258,6 +258,11 @@ article {
     left: -80px;
     margin-bottom: 20px;
     width: 400px;
+}
+
+#section_three p {
+    text-align: center;
+    letter-spacing: 0.05rem;
 }
 
 #section_three button {
@@ -317,6 +322,16 @@ footer li {
     font-weight: 200;
     letter-spacing: 0.05rem;
     line-height: 2rem;
+}
+
+footer #ikoner {
+    display: flex;
+    width: 25%;
+    margin-top: 1rem;
+}
+
+footer #ikoner img {
+    width: 100%;
 }
 
 
@@ -433,12 +448,23 @@ footer li {
 
     }
 
+/* ------- section 3 ------ */
+    #section_three .container {
+    max-width: 400px;
+    width: 100%;
+}
 
-    /*--------- section 3 ------- */
-    #section_three container {
-        border: 2px solid orange;
-        color: orange;
-    }
+#section_three h2 {
+    letter-spacing: 0.05rem;
+    font-size: 3.5rem;
+    left: -170px;
+    margin-bottom: 20px;
+    width: 600px;
+}
+
+#section_three button {
+   font-size: 1.2rem;
+}
 
     /*--------- footer -------*/
 
