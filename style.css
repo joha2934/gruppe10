@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-background: linear-gradient(0deg, rgba(6,34,32,1) 0%, rgba(12,108,112,1) 100%);
+    background: linear-gradient(0deg, rgba(6, 34, 32, 1) 0%, rgba(12, 108, 112, 1) 100%);
 
 }
 
@@ -47,8 +47,10 @@ p {}
 
 .navn {
     position: relative;
-    top: -60px;
+    top: -50px;
     background-color: white;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.66);
 
 }
 
@@ -126,13 +128,14 @@ header #menu a:last-child {
 
 #section_one h2 {
     opacity: 0.2;
-    color: #106b6e;
+    color: #4d9698;
     text-transform: uppercase;
     font-size: 8rem;
     text-align: left;
     position: relative;
     top: -30px;
     line-height: 1;
+    margin-top: 25px;
 
 }
 
@@ -184,7 +187,7 @@ article {
     flex-direction: column;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
-    top: -100px;
+    top: -90px;
     align-items: center;
     position: relative;
 }
@@ -202,6 +205,7 @@ article {
     margin-top: 20px;
 
 
+
 }
 
 .filtrering button {
@@ -212,6 +216,8 @@ article {
     padding-top: 2px;
     padding-bottom: 2px;
     font-family: 'Poppins', sans-serif;
+    color: white;
+    letter-spacing: 0.05rem;
 
 }
 
@@ -225,14 +231,15 @@ article {
 #section_three {
     padding: 50px 0;
 }
+
 #section_three .container {
-        border: 3px solid orange;
-        color: white;
+    border: 3px solid orange;
+    color: white;
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    }
+}
 
 #section_three h2 {
     position: relative;
@@ -266,12 +273,12 @@ footer {
     opacity: 0.8;
     background-blend-mode: darken;
     color: #FEB835
-
 }
 
 footer h3 {
     margin-bottom: 1rem;
 }
+
 footer .col {
     margin-bottom: 30px;
 }
@@ -288,7 +295,8 @@ footer img {
 
 
 
-table, th {
+table,
+th {
     text-align: left;
     font-weight: 200;
     width: 90%;
@@ -371,8 +379,10 @@ footer li {
 
     .filtrering {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 0.4fr 0.7fr 1fr 0.9fr 0.7fr 1fr;
+        grid-template-rows: 1fr;
         width: 85%;
+
     }
 
     .filtrering button {
@@ -384,6 +394,7 @@ footer li {
         margin-right: 0;
         margin-left: 0;
         font-size: 0.95rem;
+        z-index: 1;
 
     }
 
@@ -394,15 +405,18 @@ footer li {
 
     article {
         position: relative;
+        margin-top: -15px;
+
     }
 
     #section_two {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     #section_one h2 {
-
-        font-size: 15vw;
+        margin-top: 25px;
+        width: 100%;
+        font-size: 13.7vw;
         line-height: 1;
         margin-left: 10px;
         text-align: left;
@@ -421,15 +435,16 @@ footer li {
 
     /*sæt grid op i footer*/
     #section_footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
-    opacity: 1;;
-    padding: 50px 20px;
-    position: relative;
-    bottom: 0;
-    font-size: 0.9rem;
-}
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        opacity: 1;
+        ;
+        padding: 50px 20px;
+        position: relative;
+        bottom: 0;
+        font-size: 0.9rem;
+    }
 
 
 
