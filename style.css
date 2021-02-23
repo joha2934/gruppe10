@@ -9,6 +9,15 @@ body {
 
 }
 
+#bg_billede {
+     background-image: url(img/bund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    background-blend-mode: cover;
+    background-position:bottom ;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -265,26 +274,26 @@ article {
 
 /* ------- footer ------ */
 
+
 footer {
-    background-image: url(img/bund.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity: 0.8;
-    background-blend-mode: darken;
-    color: #FEB835
+
+    color: #FEB835;
 }
+
+#section_footer {
+    padding: 50px 20px; }
 
 footer h3 {
     margin-bottom: 1rem;
 }
 
 footer .col {
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 footer .col.logo {
     display: flex;
+    margin-top: 0;
 }
 
 footer img {
@@ -439,10 +448,7 @@ footer li {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 30px;
         opacity: 1;
-        ;
         padding: 50px 20px;
-        position: relative;
-        bottom: 0;
         font-size: 0.9rem;
     }
 
