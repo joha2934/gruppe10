@@ -14,12 +14,6 @@ section {
     padding: 0 1rem;
 }
 
-img {
-    /*    position: absolute;*/
-
-
-}
-
 
 /*---- FONTS ----*/
 
@@ -148,20 +142,6 @@ article .bobbel h2 {
 article:hover {
     cursor: pointer;
 }
-
-#section_two img {
-    width: auto;
-    height: 100%;
-    margin-left: -50px;
-}
-
-#section_two article {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-
-}
-
 
 #section_two nav {
     font-family: 'Poppins', sans-serif;
@@ -302,8 +282,27 @@ article {
         top: 2rem;
     }
 
+    .filtrering {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 85%;
+    }
+
     .filtrering button {
         border-left: 3px solid #FEB835;
+        border-bottom: none;
+        border-top: none;
+        border-right: none;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 0.95rem;
+
+    }
+
+    .filtrering button:last-child {
+        border-right: 3px solid #FEB835;
+
     }
 
     article {
