@@ -50,23 +50,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-#section_one .gul {
-    opacity: 1;
-    -webkit-text-stroke: 1.5px #FEB835;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-    color: #feb83500;
-    font-size: 7rem;
-}
-#section_one h2.hvid {
-opacity: 1;
-    font-size: 3rem;
-    text-align: center;
-    color: white;
-    position: relative;
-    top: -105px;
-}
+
 h3 {}
 
 p {
@@ -167,6 +151,24 @@ header #menu a:last-child {
     line-height: 1;
     margin-top: 25px;
 
+}
+
+#section_one .gul {
+    opacity: 1;
+    -webkit-text-stroke: 1.5px #FEB835;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    color: #feb83500;
+    font-size: 5rem;
+}
+#section_one h2.hvid {
+opacity: 1;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -90px;
 }
 
 
@@ -357,10 +359,15 @@ footer #ikoner img {
 }
 
 
+
+
+
+
+
 /* ----- Style for Desktop ------ */
 
 @media only screen and (min-width: 800px) {
-
+ /*------ font ------*/
     h1 {
         top: 25vh;
         font-size: 4rem;
@@ -370,7 +377,7 @@ footer #ikoner img {
     b {
         letter-spacing: -0.6rem;
     }
-
+/*------ header -------*/
     #menuknap {
         display: none;
     }
@@ -405,7 +412,7 @@ footer #ikoner img {
     }
 
     header {
-        height: 110vh;
+        height: 120vh;
     }
 
 
@@ -469,6 +476,14 @@ footer #ikoner img {
         position: relative;
 
     }
+
+    #section_one .gul {
+        font-size: 7rem; }
+
+    #section_one h2.hvid {
+    font-size: 3rem;
+    top: -105px;
+}
 
 /* ------- section 3 ------ */
     #section_three .container {
