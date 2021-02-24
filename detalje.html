@@ -103,6 +103,15 @@
 
         }
 
+        .levested {
+            margin-top: -10px;
+
+        }
+
+        .stoerrelse {
+            margin-top: -10px;
+        }
+
         footer {
             padding-top: 3vw;
         }
@@ -161,8 +170,7 @@
             <h2 class="art"></h2>
             <p class="videnskabeligtnavn"></p>
             <p class="levested"></p>
-            <p class="størrelse"></p>
-            <p class="kortbeskrivelse"></p>
+            <p class="stoerrelse"></p>
             <p class="langbeskrivelse"></p>
         </article>
 
@@ -196,11 +204,11 @@
             console.log("levested", fiske);
             document.querySelector(".billede").src = medieurl + fiske.billede;
             document.querySelector(".art").textContent = fiske.art;
-            document.querySelector(".videnskabeligtnavn").textContent = "Videnskabeligt navn: " + fiske.videnskabeligtnavn;
-            document.querySelector(".levested").textContent = "Levested: " + fiske.levested;
-            document.querySelector(".størrelse").textContent = "Størrelse: " + fiske.størrelse;
-            document.querySelector(".kortbeskrivelse").textContent = fiske.kortbeskrivelse;
-            document.querySelector(".langbeskrivelse").textContent = "Beskrivelse: " + fiske.langbeskrivelse;
+            document.querySelector(".videnskabeligtnavn").textContent = "VIDENSKABELIGT NAVN: " + fiske.videnskabeligtnavn;
+            document.querySelector(".levested").textContent = "LEVESTED: " + fiske.levested;
+            document.querySelector(".stoerrelse").textContent = "STØRRELSE: " + fiske.stoerrelse;
+
+            document.querySelector(".langbeskrivelse").textContent = "BESKRIVELSE: " + fiske.langbeskrivelse;
             document.querySelector("button").addEventListener("click", tilbageTilForsiden);
         }
 
