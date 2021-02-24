@@ -212,7 +212,6 @@
             display: grid;
             margin: 0 auto;
             max-width: 95%;
-            margin-bottom: 20px;
             position: relative;
             top: -27vw;
             margin-bottom: -20vw;
@@ -334,6 +333,16 @@
 
 
         @media only screen and (min-width: 800px) {
+
+            main img {
+
+                top: 0;
+                display: flex;
+                vertical-align: middle;
+
+
+            }
+
             #liste {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -390,6 +399,12 @@
                 top: 2rem;
             }
 
+            article {
+                margin-bottom: 0;
+                top: 0;
+
+            }
+
 
             main h1 {
                 margin-top: -50px;
@@ -408,10 +423,6 @@
             }
 
             /* ------- section 3 ------ */
-
-            #section_three {
-                margin-top: -40vw;
-            }
 
             #section_three .container {
                 max-width: 400px;
