@@ -50,6 +50,23 @@ h2 {
     font-size: 1.2rem;
 }
 
+#section_one .gul {
+    opacity: 1;
+    -webkit-text-stroke: 1.5px #FEB835;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    color: #feb83500;
+    font-size: 7rem;
+}
+#section_one h2.hvid {
+opacity: 1;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -105px;
+}
 h3 {}
 
 p {
