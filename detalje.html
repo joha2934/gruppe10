@@ -69,6 +69,7 @@
 
         #logo {
             width: 15rem;
+            margin-left: -1vw;
         }
 
         header a {
@@ -140,7 +141,7 @@
             margin: 0 auto;
             display: block;
             position: relative;
-            top: -14vw;
+            top: -16.5vw;
             z-index: 1;
             /*           transform: translateY(15%);*/
         }
@@ -150,14 +151,14 @@
             max-width: 1000px;
         }
 
-        main h1 {
-            color: rgba(199, 241, 242, 0.48);
+        h1 {
+            color: #4d9698;
             text-transform: uppercase;
             font-size: 4rem;
             position: relative;
             line-height: 1;
             text-align: center;
-            top: 5vw;
+            top: 2vw;
         }
 
         main h2 {
@@ -173,6 +174,7 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 200;
             margin-left: 6.5vw;
+            margin-right: 6.5vw;
 
         }
 
@@ -183,7 +185,7 @@
             color: black;
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
-            border: 3px solid #FEB835;
+            border: none;
             position: relative;
             padding: 7px;
             background: none;
@@ -191,8 +193,18 @@
             letter-spacing: 0.05rem;
             color: white;
             line-height: 1.2rem;
-            top: 5vw;
+            display: flex;
+            place-items: center;
 
+        }
+
+        .tilbage img {
+            width: 20%;
+            margin-right: 5px;
+        }
+
+        button.tilbage:hover {
+            cursor: pointer;
         }
 
         article {
@@ -202,7 +214,8 @@
             max-width: 95%;
             margin-bottom: 20px;
             position: relative;
-            top: -25vw;
+            top: -27vw;
+            margin-bottom: -20vw;
 
         }
 
@@ -395,6 +408,11 @@
             }
 
             /* ------- section 3 ------ */
+
+            #section_three {
+                margin-top: -40vw;
+            }
+
             #section_three .container {
                 max-width: 400px;
                 width: 100%;
@@ -427,6 +445,7 @@
 
 
         }
+
     </style>
 </head>
 
@@ -445,7 +464,7 @@
         </section>
     </header>
 
-    <button class="tilbage">Tilbage</button>
+    <button class="tilbage"><img src="img/tilbage.svg">Tilbage</button>
     <h1>Dybet Akvarium</h1>
     <main id="liste">
         <img src="" alt="" class="billede">
@@ -568,7 +587,10 @@
         function tilbageTilForsiden() {
             history.back();
         }
+
     </script>
 
     <script src="script2.js"></script>
-</body></html>
+</body>
+
+</html>
