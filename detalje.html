@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="">
 
     <style>
+        /* Generelt*/
         * {
             padding: 0;
             margin: 0;
@@ -40,17 +41,7 @@
             background: linear-gradient(0deg, rgba(6, 34, 32, 1) 0%, rgba(12, 108, 112, 1) 100%);
         }
 
-        p {
-            font-weight: 200;
-        }
-
-        .videnskabeligtnavn, .levested, .stoerrelse {
-                margin-bottom: 1.5rem;
-            }
-
-
-
-        #bg_billede {
+         #bg_billede {
             background-image: url(img/bund.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -65,7 +56,18 @@
             padding: 0 1rem;
         }
 
-        /* ----- Header ----- */
+        /* fonts */
+
+        p {
+            font-weight: 200;
+        }
+
+        .videnskabeligtnavn, .levested, .stoerrelse {
+                margin-bottom: 1.5rem;
+            }
+
+
+        /* ----- Header/nav MOBIL ----- */
 
 
         #section_header {
@@ -127,6 +129,8 @@
             position: absolute;
         }
 
+        /*------ section 1 MOBIL -----*/
+
         #section_one h2 {
             opacity: 0.2;
             color: #4d9698;
@@ -137,10 +141,37 @@
             top: -30px;
             line-height: 1;
             margin-top: 25px;
+        }
 
+        /* tilbage knap */
+        button.tilbage {
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            border: none;
+            position: relative;
+            padding: 7px;
+            background: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            color: white;
+            line-height: 1.2rem;
+            display: flex;
+            place-items: center;
+        }
+
+        .tilbage img {
+            width: 20%;
+            margin-right: 10px;
+        }
+
+        button.tilbage:hover {
+            cursor: pointer;
+            opacity: 0.7;
         }
 
 
+        /*------ main MOBIL -------*/
         main img {
             opacity: 0.8;
             width: 100%;
@@ -173,8 +204,6 @@
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 20px;
-
-
         }
 
         main p {
@@ -182,32 +211,6 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 200;
 
-        }
-
-        button.tilbage {
-            color: black;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            border: none;
-            position: relative;
-            padding: 7px;
-            background: none;
-            text-transform: uppercase;
-            letter-spacing: 0.05rem;
-            color: white;
-            line-height: 1.2rem;
-            display: flex;
-            place-items: center;
-
-        }
-
-        .tilbage img {
-            width: 20%;
-            margin-right: 5px;
-        }
-
-        button.tilbage:hover {
-            cursor: pointer;
         }
 
         article {
@@ -233,13 +236,13 @@
 
 
 
-        /* ------- section 3 ------*/
+        /* ------- section 3 MOBIL ------*/
         #section_three {
             padding: 50px 0;
         }
 
         #section_three .container {
-            border: 3px solid orange;
+            border: 2px solid orange;
             color: white;
             max-width: 300px;
             width: 100%;
@@ -263,20 +266,22 @@
         }
 
         #section_three button {
-            margin: 0 auto;
-            display: block;
-            color: white;
-            background-color: #1F1F1F;
-            padding: 10px 20px;
-            letter-spacing: 0.05rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border: none;
-        }
+    margin: 0 auto;
+    display: block;
+    color: white;
+    background-color: #77c8d852;
+    padding: 10px 20px;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 2px solid #77c8d8;
+}
+#section_three button:hover {
+    opacity: 0.7;
+}
 
 
-        /* ------- footer ------ */
-
+        /* ------- footer MOBIL ------ */
 
         footer {
 
@@ -304,10 +309,6 @@
             width: 60%;
             justify-content: center;
         }
-
-
-
-
         table,
         th {
             text-align: left;
@@ -334,40 +335,15 @@
         }
 
 
-
+/*--------- STYLE FOR DESKTOP -----------*/
 
         @media only screen and (min-width: 800px) {
-
+/* font */
             h1 {
                 font-size: 7rem;
             }
-
-
-            main h2 {
-                left: -30px;
-                position: relative;
-                margin-bottom: 20px;
-            }
-            main img {
-
-                top: 0;
-                display: flex;
-                vertical-align: middle;
-                position: relative;
-                width: 120%;
-                opacity: 1;
-                right: -5%;
-
-
-            }
-
-            #liste {
-                display: grid;
-                grid-template-columns: 1fr 2fr;
-                grid-column-gap: 40px;
-            }
-
-            #menuknap {
+ /*------- header/nav DESKTOP ------*/
+             #menuknap {
                 display: none;
             }
 
@@ -415,20 +391,37 @@
                 top: 2rem;
             }
 
+/*----- main DESKTOP -----*/
+
+            main h2 {
+                left: -30px;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            main img {
+
+                top: 0;
+                display: flex;
+                vertical-align: middle;
+                position: relative;
+                width: 120%;
+                opacity: 1;
+                right: -5%;
+            }
+
+            #liste {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 40px;
+            }
             article {
                 margin-bottom: 0;
                 top: 0;
                 left: -5%;
-
             }
-
-
-
             main .paragraph {
                 padding: 40px 30px 50px 90px;
-
             }
-
             main button {
                 margin-bottom: 50px;
             }
@@ -463,9 +456,6 @@
                 padding: 50px 20px;
                 font-size: 0.9rem;
             }
-
-
-
         }
 
     </style>
