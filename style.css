@@ -55,7 +55,7 @@ h2 {
     text-align: center;
     padding-bottom: 1vw;
     padding-top: 1vw;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 p {
@@ -66,9 +66,8 @@ p {
 
     position: relative;
     /*-- kan flyttes ift original placering */
-    top: -50px;
     position: relative;
-    top: -54px;
+    top: -35px;
     font-weight: 300;
     background-color: #052829;
     color: white;
