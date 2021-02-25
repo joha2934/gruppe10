@@ -145,26 +145,30 @@ header #menu a:last-child {
     margin: 0 auto;
     display: block;
     position: relative;
-    top: 260px;
+    margin-top: 100px;
+    left: 10px;
     animation-name: pil_kf;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    transform: rotateZ(270deg);
 }
 
-@keyframes pil_kf{
+@keyframes pil_kf {
     0% {
         top: 260px;
 
     }
 
     50% {
-        top:245px;
+        top: 245px;
     }
+
     100% {
         top: 260px;
     }
 }
+
 .pil img {
     width: 50px;
 }
@@ -175,7 +179,7 @@ header #menu a:last-child {
     opacity: 0.2;
     color: #4d9698;
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 4.2rem;
     text-align: left;
     position: relative;
     top: -30px;
@@ -265,7 +269,7 @@ article {
     flex-direction: column;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
-    top: -100px;
+    top: -77px;
     align-items: center;
     position: relative;
 }
@@ -320,7 +324,8 @@ article {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
-    padding: 30px;
+    padding: 70px 30px 25px 30px;
+    margin-top: -60px;
 }
 
 /* ----- Design og postionering af bestemt h2 -------*/
@@ -330,10 +335,10 @@ article {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
-    font-size: 3rem;
-    left: -80px;
-    margin-bottom: 20px;
-    width: 400px;
+    font-size: 3.4rem;
+    margin-bottom: -20px;
+    top: 30px;
+    color: white;
 }
 
 #section_three p {
@@ -352,7 +357,8 @@ article {
     padding: 10px 20px;
     letter-spacing: 0.05rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     border: 2px solid #77c8d8;
 }
 
@@ -572,18 +578,23 @@ footer #ikoner img {
     #section_three .container {
         max-width: 400px;
         width: 100%;
+        padding-top: 120px;
+        padding-bottom: 30px;
     }
 
     #section_three h2 {
+        display: flex;
+        justify-content: center;
         letter-spacing: 0.05rem;
-        font-size: 3.5rem;
-        left: -170px;
-        margin-bottom: 20px;
-        width: 600px;
+        font-size: 5rem;
+        top: 65px;
+
     }
 
     #section_three button {
         font-size: 1.2rem;
+        margin-top: -5px;
+        margin-bottom: 20px;
     }
 
 
