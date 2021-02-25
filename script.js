@@ -3,6 +3,7 @@ window.addEventListener("load", start);
 
 function start() {
     // henter #menuknap, tildeler "click", går til toggleMenu
+    console.log("start");
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
     // Henter knapper fra filtrering
     const filterKnapper = document.querySelectorAll(".filtrering button");
@@ -76,7 +77,7 @@ function filtrerFisk() {
     document.querySelector(".valgt").classList.remove("valgt");
     //Tilføj classen valgt
     this.classList.add("valgt");
-//Gå til visFiske
+    //Gå til visFiske
     visFiske();
     //Valgte knap bliver vist som h2 i section_one
     header.textContent = this.textContent;

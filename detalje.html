@@ -41,7 +41,7 @@
             background: linear-gradient(0deg, rgba(6, 34, 32, 1) 0%, rgba(12, 108, 112, 1) 100%);
         }
 
-         #bg_billede {
+        #bg_billede {
             background-image: url(img/bund.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -62,9 +62,11 @@
             font-weight: 200;
         }
 
-        .videnskabeligtnavn, .levested, .stoerrelse {
-                margin-bottom: 1.5rem;
-            }
+        .videnskabeligtnavn,
+        .levested,
+        .stoerrelse {
+            margin-bottom: 1.5rem;
+        }
 
 
         /* ----- Header/nav MOBIL ----- */
@@ -170,6 +172,10 @@
             opacity: 0.7;
         }
 
+        #liste {
+            margin-top: 50px;
+        }
+
 
         /*------ main MOBIL -------*/
         main img {
@@ -191,7 +197,7 @@
 
         h1 {
             opacity: 0.2;
-    color: #4d9698;
+            color: #4d9698;
             text-transform: uppercase;
             font-size: 4rem;
             position: relative;
@@ -243,27 +249,28 @@
         }
 
         #section_three .container {
-            border: 2px solid orange;
+            border: 2px solid #FEB835;
             color: white;
             max-width: 300px;
             width: 100%;
             margin: 0 auto;
-            padding: 30px;
+            padding: 70px 30px 25px 30px;
+            margin-top: -60px;
         }
 
+        /* ----- Design og postionering af bestemt h2 -------*/
+
+
         #section_three h2 {
+            display: flex;
+            justify-content: center;
             position: relative;
             text-transform: uppercase;
             letter-spacing: 0.05rem;
-            font-size: 3rem;
-            left: -80px;
-            margin-bottom: 20px;
-            width: 400px;
-        }
-
-        #section_three p {
-            text-align: center;
-            letter-spacing: 0.05rem;
+            font-size: 3.4rem;
+            margin-bottom: -20px;
+            top: 30px;
+            color: white;
         }
 
         #section_three button {
@@ -274,13 +281,21 @@
             padding: 10px 20px;
             letter-spacing: 0.05rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            margin-top: 15px;
             border: 2px solid #77c8d8;
         }
 
         #section_three button:hover {
             opacity: 0.7;
         }
+
+
+        #section_three p {
+            text-align: center;
+            letter-spacing: 0.05rem;
+        }
+
 
 
         /* ------- footer MOBIL ------ */
@@ -311,6 +326,7 @@
             width: 60%;
             justify-content: center;
         }
+
         table,
         th {
             text-align: left;
@@ -337,15 +353,17 @@
         }
 
 
-/*--------- STYLE FOR DESKTOP -----------*/
+        /*--------- STYLE FOR DESKTOP -----------*/
 
         @media only screen and (min-width: 800px) {
-/* font */
+
+            /* font */
             h1 {
                 font-size: 7rem;
             }
- /*------- header/nav DESKTOP ------*/
-             #menuknap {
+
+            /*------- header/nav DESKTOP ------*/
+            #menuknap {
                 display: none;
             }
 
@@ -381,7 +399,7 @@
             }
 
 
-/*--- placering af navigation ---*/
+            /*--- placering af navigation ---*/
 
             header nav {
                 position: absolute;
@@ -396,13 +414,14 @@
                 top: 2rem;
             }
 
-/*----- main DESKTOP -----*/
+            /*----- main DESKTOP -----*/
 
             main h2 {
                 left: -30px;
                 position: relative;
                 margin-bottom: 20px;
             }
+
             main img {
 
                 top: 0;
@@ -418,36 +437,48 @@
                 display: grid;
                 grid-template-columns: 1fr 2fr;
                 grid-column-gap: 40px;
+                margin-top: 0;
             }
+
             article {
                 margin-bottom: 0;
                 top: 0;
                 left: -5%;
             }
+
             main .paragraph {
                 padding: 40px 30px 50px 90px;
             }
+
             main button {
                 margin-bottom: 50px;
             }
 
             /* ------- section 3 ------ */
+            #section_three {
+                margin-top: 100px;
+            }
 
             #section_three .container {
                 max-width: 400px;
                 width: 100%;
+                padding-top: 120px;
+                padding-bottom: 30px;
             }
 
             #section_three h2 {
+                display: flex;
+                justify-content: center;
                 letter-spacing: 0.05rem;
-                font-size: 3.5rem;
-                left: -170px;
-                margin-bottom: 20px;
-                width: 600px;
+                font-size: 5rem;
+                top: 65px;
+
             }
 
             #section_three button {
                 font-size: 1.2rem;
+                margin-top: -5px;
+                margin-bottom: 20px;
             }
 
             /*--------- footer -------*/
@@ -480,9 +511,10 @@
             </nav>
         </section>
     </header>
-<section>
-    <button class="tilbage"><img src="img/tilbage.svg">Tilbage</button>
-    <h1>Dybet Akvarium</h1></section>
+    <section>
+        <button class="tilbage"><img src="img/tilbage.svg">Tilbage</button>
+        <h1>Dybet Akvarium</h1>
+    </section>
     <main id="liste">
         <img src="" alt="" class="billede">
         <article class="paragraph">
@@ -496,8 +528,11 @@
     </main>
     <div id="bg_billede">
         <section id="section_three">
-            <div class="container">
+            <div class="besoeg">
                 <h2>Besøg os i dag</h2>
+            </div>
+            <div class="container">
+
                 <button>Køb billet</button>
                 <p>Og få en oplevelse du aldrig vil glemme!</p>
             </div>
@@ -560,7 +595,6 @@
     </div>
 
     <script>
-
         // konstant s
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
@@ -611,7 +645,7 @@
             // gør så man kan klikke på button og går til tilbageTilForsiden
             document.querySelector("button").addEventListener("click", tilbageTilForsiden);
         }
-            // function som går tilbage til forsiden
+        // function som går tilbage til forsiden
         function tilbageTilForsiden() {
             history.back();
         }

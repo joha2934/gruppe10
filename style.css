@@ -12,7 +12,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(0deg, rgba(6, 34, 32, 1) 0%, rgba(12, 108, 112, 1) 100%);/* -- lodret gradient */
+    background: linear-gradient(0deg, rgba(6, 34, 32, 1) 0%, rgba(12, 108, 112, 1) 100%);
+    /* -- lodret gradient */
 
 }
 
@@ -42,7 +43,8 @@ h1 {
     text-align: center;
     color: white;
     text-shadow: none;
-    position: relative; /*-- kan flyttes ift original placering */
+    position: relative;
+    /*-- kan flyttes ift original placering */
     font-size: 2rem;
     text-transform: uppercase;
     line-height: 2rem;
@@ -61,8 +63,12 @@ p {
 }
 
 .navn {
-    position: relative; /*-- kan flyttes ift original placering */
+
+    position: relative;
+    /*-- kan flyttes ift original placering */
     top: -50px;
+    position: relative;
+    top: -40px;
     font-weight: 300;
     background-color: #052829;
     color: white;
@@ -79,12 +85,14 @@ header {
     background-image: url(img/splash.png);
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative; /*-- kan flyttes ift original placering */
+    position: relative;
+    /*-- kan flyttes ift original placering */
     height: 80vh;
 }
 
 #section_header {
-    position: relative; /*-- kan flyttes ift original placering */
+    position: relative;
+    /*-- kan flyttes ift original placering */
 }
 
 #logo {
@@ -100,9 +108,11 @@ header a {
     line-height: 3rem;
 }
 
-header #menu a:last-child { /* kalder på sidste a-element i #menu */
+header #menu a:last-child {
+    /* kalder på sidste a-element i #menu */
     border: 3px solid #FEB835;
-    position: relative; /*-- pga 'border' ændres placering ift andre a-elementer */
+    position: relative;
+    /*-- pga 'border' ændres placering ift andre a-elementer */
     padding: 7px;
 }
 
@@ -113,14 +123,16 @@ header #menu a:last-child { /* kalder på sidste a-element i #menu */
     flex-direction: column;
     text-align: right;
     text-align: right;
-    position: absolute; /*-- positionerer sig ud fra første relative parent (header) */
+    position: absolute;
+    /*-- positionerer sig ud fra første relative parent (header) */
     right: 2rem;
     top: 5rem;
 }
 
 .hidden {
     display: none;
-    transform: scale(0); /* skalerer den væk (fra 100%-0%) */
+    transform: scale(0);
+    /* skalerer den væk (fra 100%-0%) */
 }
 
 
@@ -132,35 +144,63 @@ header #menu a:last-child { /* kalder på sidste a-element i #menu */
     top: 1rem;
     right: 1rem;
     color: white;
-    z-index: 1; /*  z-index styrer tingenes rækkefølge (højeste tal ligger øverst)*/
-    float: right; /*  placerer #menunkap i højre side*/
-    position: absolute; /*-- positionerer sig ud fra første relative parent (header) */
+    z-index: 1;
+    /*  z-index styrer tingenes rækkefølge (højeste tal ligger øverst)*/
+    float: right;
+    /*  placerer #menunkap i højre side*/
+    position: absolute;
+    /*-- positionerer sig ud fra første relative parent (header) */
 }
 
 .pil {
     max-width: 50px;
     margin: 0 auto;
-    display: block; /* gør at  den fylder hele sin bredde (100%) */
-    position: relative;  /*-- pga 'border' ændres placering ift andre a-elementer */
+    display: block;
+    /* gør at  den fylder hele sin bredde (100%) */
+    position: relative;
+    /*-- pga 'border' ændres placering ift andre a-elementer */
     top: 260px;
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    left: 10px;
     animation-name: pil_kf;
     animation-duration: 2s;
-    animation-iteration-count: infinite; /* kører i evighed */
+    animation-iteration-count: infinite;
+    /* kører i evighed */
     animation-timing-function: ease-in-out;
+    transform: rotateZ(270deg);
 }
 
-@keyframes pil_kf{
+@keyframes pil_kf {
     0% {
-        top: 260px;   /* så */
-    }                /* det */
-                    /* kører */
-    50% {            /* op */
-        top:245px;   /* og */
-    }               /* ned */
-    100% {
         top: 260px;
+        /* så */
     }
+
+    /* det */
+    /* kører */
+    50% {
+        /* op */
+        top: 245px;
+        /* og */
+    }
+
+    /* ned */
+
+    top: 260px;
+
 }
+
+50% {
+    top: 245px;
+}
+
+100% {
+    top: 260px;
+}
+}
+
 .pil img {
     width: 50px;
 }
@@ -171,9 +211,10 @@ header #menu a:last-child { /* kalder på sidste a-element i #menu */
     opacity: 0.2;
     color: #4d9698;
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 4.2rem;
     text-align: left;
-    position: relative; /* så tingene kan sidde ovenpå hinanden */
+    position: relative;
+    /* så tingene kan sidde ovenpå hinanden */
     top: -30px;
     line-height: 1;
     margin-top: 25px;
@@ -181,7 +222,8 @@ header #menu a:last-child { /* kalder på sidste a-element i #menu */
 }
 
 #section_one .gul {
-    -webkit-text-stroke: 1.5px #FEB835; /* gør at man sikrer den virker på alle browsere */
+    -webkit-text-stroke: 1.5px #FEB835;
+    /* gør at man sikrer den virker på alle browsere */
     text-align: center;
     color: #feb83500;
     font-size: 5rem;
@@ -192,9 +234,11 @@ header #menu a:last-child { /* kalder på sidste a-element i #menu */
     font-size: 2rem;
     text-align: center;
     color: white;
-    position: relative; /* så tingene kan sidde ovenpå hinanden */
+    position: relative;
+    /* så tingene kan sidde ovenpå hinanden */
     top: -40px;
-    text-transform: uppercase; /* CAPSLOCK */
+    text-transform: uppercase;
+    /* CAPSLOCK */
     line-height: 2rem;
 }
 
@@ -204,7 +248,8 @@ p.headline {
     letter-spacing: 0.02rem;
     max-width: 500px;
     margin: 0 auto;
-    position: relative; /* så man kan rykke den op ad */
+    position: relative;
+    /* så man kan rykke den op ad */
     top: -20px;
 }
 
@@ -224,8 +269,10 @@ article:hover {
 
 
 button {
-    border: none; /* generel styling for at fjerne originale properties */
-    background: none; /* generel styling for at fjerne originale properties */
+    border: none;
+    /* generel styling for at fjerne originale properties */
+    background: none;
+    /* generel styling for at fjerne originale properties */
     cursor: pointer;
 }
 
@@ -233,7 +280,7 @@ button {
 
 #section_two {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     column-gap: 20px;
     grid-row-gap: 20px;
     margin: 0 auto;
@@ -242,7 +289,7 @@ button {
 article {
     margin-left: 0.5vw;
     margin-right: 0.5vw;
-    top: -100px;
+    top: -77px;
     align-items: center;
     position: relative;
 }
@@ -294,7 +341,8 @@ article {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
-    padding: 30px;
+    padding: 70px 30px 25px 30px;
+    margin-top: -60px;
 }
 
 /* ----- Design og postionering af bestemt h2 -------*/
@@ -304,10 +352,10 @@ article {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
-    font-size: 3rem;
-    left: -80px;
-    margin-bottom: 20px;
-    width: 400px;
+    font-size: 3.4rem;
+    margin-bottom: -20px;
+    top: 30px;
+    color: white;
 }
 
 #section_three p {
@@ -326,7 +374,8 @@ article {
     padding: 10px 20px;
     letter-spacing: 0.05rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     border: 2px solid #77c8d8;
 }
 
@@ -419,7 +468,8 @@ footer #ikoner img {
     }
 
     #menu {
-        transform: translateX(0); /* fordeles på x-aksen */
+        transform: translateX(0);
+        /* fordeles på x-aksen */
         display: flex;
         position: inherit;
         justify-content: flex-end;
@@ -516,7 +566,8 @@ footer #ikoner img {
 
     #section_two {
 
-        grid-auto-flow: dense; /* udfylder huller i grid */
+        grid-auto-flow: dense;
+        /* udfylder huller i grid */
         grid-template-columns: repeat(4, 1fr);
         grid-row-gap: 0px;
         grid-column-gap: 0;
@@ -525,7 +576,8 @@ footer #ikoner img {
 
     article {
         max-width: 260px;
-        transition: all 0.2s ease-in-out; /* gør at :hover virker begge veje */
+        transition: all 0.2s ease-in-out;
+        /* gør at :hover virker begge veje */
     }
 
     article:nth-child(7n-1) {
@@ -545,18 +597,23 @@ footer #ikoner img {
     #section_three .container {
         max-width: 400px;
         width: 100%;
+        padding-top: 120px;
+        padding-bottom: 30px;
     }
 
     #section_three h2 {
+        display: flex;
+        justify-content: center;
         letter-spacing: 0.05rem;
-        font-size: 3.5rem;
-        left: -170px;
-        margin-bottom: 20px;
-        width: 600px;
+        font-size: 5rem;
+        top: 65px;
+
     }
 
     #section_three button {
         font-size: 1.2rem;
+        margin-top: -5px;
+        margin-bottom: 20px;
     }
 
 
