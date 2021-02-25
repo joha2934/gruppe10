@@ -41,7 +41,7 @@ const myHeaders = {
     'x-apikey': "602e97ac5ad3610fb5bb6361"
 };
 
-
+// variabler
 let filter = "alle";
 let fiske;
 
@@ -84,7 +84,7 @@ async function hentData() {
     // vis i consollen
     console.log("Fisk", fiske);
 
-    // Gå til viFiske
+    // Gå til visFiske
     visFiske();
 }
 

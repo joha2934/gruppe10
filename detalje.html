@@ -555,47 +555,58 @@
     </div>
 
     <script>
+
+        // konstant s
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
-
+        // henter billeder
         const medieurl = "https://fiskfisk-2fc1.restdb.io/media/";
-
+        // variabel
         let fiske;
-
+        // nøgle til adgang
         const myHeaders = {
             "x-apikey": "602e97ac5ad3610fb5bb6361"
         }
-
+        // skriver "ID" ud i konsollen
         console.log("ID", id);
+        // Tjekker om contet er loadet fra DOM, går videre til hentData
         document.addEventListener("DOMContentLoaded", hentData)
-
+        // hent data fra database
         async function hentData() {
             const JSONData = await fetch(`https://fiskfisk-2fc1.restdb.io/rest/fisk/${id}`, {
                 headers: myHeaders
             });
+            // udskriver JSONData
             fiske = await JSONData.json();
+            // vis i konsollen
             console.log("Fisk", fiske);
+            // gå til visFiske
             visFiske(fiske);
         }
 
         function visFiske() {
+            // vis i konsollen
             console.log("levested", fiske);
+            // tilføjer .levested som h1 i html
             document.querySelector("h1").textContent = fiske.levested;
+            // tilføjer .billede til html
             document.querySelector(".billede").src = medieurl + fiske.billede;
+            // tilføjer .art som tekst i html
             document.querySelector(".art").textContent = fiske.art;
+            // tilføjer .videnskabeligtnavn som innerHTML for at kunne gøre tekst 'bold'
             document.querySelector(".videnskabeligtnavn").innerHTML = "<b>VIDENSKABELIGT NAVN: </b>" + fiske.videnskabeligtnavn;
+            // tilføjer .levested som innerHTML for at kunne gøre tekst 'bold'
             document.querySelector(".levested").innerHTML = "<b>LEVESTED: </b>" + fiske.levested;
+            // tilføjer .stoerrelse som innerHTML for at kunne gøre tekst 'bold'
             document.querySelector(".stoerrelse").innerHTML = "<b>STØRRELSE: </b>" + fiske.stoerrelse;
-
-
-
+            // tilføjer .langbesrkivelse til html
             document.querySelector(".langbeskrivelse").textContent = "BESKRIVELSE: " + fiske.langbeskrivelse;
-
+            // tilføjer som innerHTML for at kunne gøre tekst 'bold'
             document.querySelector(".langbeskrivelse").innerHTML = "<b>BESKRIVELSE:</b> <br>" + fiske.langbeskrivelse;
-
+            // gør så man kan klikke på button og går til tilbageTilForsiden
             document.querySelector("button").addEventListener("click", tilbageTilForsiden);
         }
-
+            // function som går tilbage til forsiden
         function tilbageTilForsiden() {
             history.back();
         }
