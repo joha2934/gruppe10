@@ -219,6 +219,7 @@ button {
     cursor: pointer;
 }
 
+/* ----- Laver grid på section_two -------*/
 
 #section_two {
     display: grid;
@@ -241,6 +242,8 @@ article {
 }
 
 
+/* ----- Postionering af filtreringsmenuen -------*/
+
 .filtrering {
     margin: 0 auto;
     flex-direction: row;
@@ -253,6 +256,9 @@ article {
     grid-row-gap: 10px;
     margin-top: 20px;
 }
+
+
+/* ----- Design af filtreringsknapper -------*/
 
 .filtrering button {
     margin-left: 10px;
@@ -288,6 +294,9 @@ article {
     padding: 30px;
 }
 
+/* ----- Design og postionering af bestemt h2 -------*/
+
+
 #section_three h2 {
     position: relative;
     text-transform: uppercase;
@@ -302,6 +311,9 @@ article {
     text-align: center;
     letter-spacing: 0.05rem;
 }
+
+
+/* ----- Design og postionering af bestemt knap -------*/
 
 #section_three button {
     margin: 0 auto;
@@ -448,6 +460,7 @@ footer #ikoner img {
     }
 
     /*------- section 1 DESKTOP ------*/
+
     #section_one h2 {
         margin-top: 25px;
         width: 100%;
@@ -473,6 +486,7 @@ footer #ikoner img {
     }
 
     /*------ section 2 DESKTOP --------*/
+
     .filtrering {
         display: grid;
         grid-template-columns: 0.4fr 0.7fr 1fr 0.9fr 0.7fr 1fr;
@@ -525,6 +539,7 @@ footer #ikoner img {
     }
 
     /* ------- section 3 DESKTOP ------ */
+
     #section_three .container {
         max-width: 400px;
         width: 100%;
@@ -546,7 +561,8 @@ footer #ikoner img {
 
     /*--------- footer DESKTOP -------*/
 
-    /*sæt grid op i footer*/
+    /*--- sæt grid op i footer ---*/
+
     #section_footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
