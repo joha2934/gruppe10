@@ -235,7 +235,7 @@ article {
     flex-direction: column;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
-    top: -90px;
+    top: -100px;
     align-items: center;
     position: relative;
 }
@@ -509,6 +509,7 @@ footer #ikoner img {
 
     article {
         max-width: 260px;
+        transition: all 0.2s ease-in-out;
     }
 
     article:nth-child(7n-1) {
@@ -521,7 +522,6 @@ footer #ikoner img {
 
     article:hover {
         transform: scale(1.15);
-        transition: all 0.3s ease-in-out;
     }
 
     /* ------- section 3 DESKTOP ------ */
