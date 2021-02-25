@@ -55,16 +55,13 @@ h2 {
     font-size: 1.2rem;
 }
 
-
-h3 {}
-
 p {
     font-weight: 200;
 }
 
 .navn {
     position: relative;
-    top: -50px;
+    top: -40px;
     font-weight: 300;
     background-color: #052829;
     color: white;
@@ -256,7 +253,7 @@ button {
 
 #section_two {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     column-gap: 20px;
     grid-row-gap: 20px;
     margin: 0 auto;
