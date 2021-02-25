@@ -1,11 +1,17 @@
 // load siden
-window.addEventListener("load", sidenVises);
+window.addEventListener("load", start);
 
-function sidenVises() {
-    // Viser "siden vises" i konsollen
-    console.log("sidenVises");
-    // Kalder på #menuknap, adder 'click' og går til toggleMenu
+function start() {
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+    // Henter knapper fra filtrering
+    const filterKnapper = document.querySelectorAll(".filtrering button");
+    // vis i consollen
+    console.log(filterKnapper);
+    // Sætter klik på alle
+    filterKnapper.forEach(knap => knap.addEventListener("click", filtrerFisk));
+
+    // Går til hentData
+    hentData();
 }
 
 function toggleMenu() {
@@ -31,8 +37,8 @@ function toggleMenu() {
 
 
 
-// Tjekker om contet er loadet fra DOM, går videre til start
-document.addEventListener("DOMContentLoaded", start);
+
+
 const header = document.querySelector("#section_one h2");
 // Henter billeder
 const medieurl = "https://fiskfisk-2fc1.restdb.io/media/";
@@ -47,6 +53,7 @@ let fiske;
 
 
 function start() {
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
     // Henter knapper fra filtrering
     const filterKnapper = document.querySelectorAll(".filtrering button");
     // vis i consollen
