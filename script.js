@@ -2,7 +2,7 @@
 window.addEventListener("load", sidenVises);
 
 function sidenVises() {
-    // Viser "siden vies" i konsollen
+    // Viser "siden vises" i konsollen
     console.log("sidenVises");
     // Kalder på #menuknap, adder 'click' og går til toggleMenu
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
