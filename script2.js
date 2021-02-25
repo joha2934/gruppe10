@@ -1,3 +1,4 @@
+// Load siden
 window.addEventListener("load", sidenVises);
 
 function sidenVises() {
@@ -10,15 +11,16 @@ function sidenVises() {
 function toggleMenu() {
     // Viser "toggleMenu" i konsollen
     console.log("toggleMenu");
-    // Kalder på #menu, tildeler classen 'hidden'
+    // Kalder på #menu, skifter mellem at add og remove classen 'hidden'
     document.querySelector("#menu").classList.toggle("hidden");
-
+    // Når #menu indeholder .hidden
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-
+    // hvis #menu indeholder .hidden er sand, vises burgermenu ikon
     if (erSkjult == true) {
         document.querySelector("#menuknap").textContent = "☰";
 
-    } else {
+    } //ellers vises menupunkterne og x ikon
+    else {
         document.querySelector("#menuknap").textContent = "✕";
         document.querySelector("#menu").classList.remove("hidden");
     }

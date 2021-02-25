@@ -13,9 +13,9 @@ function toggleMenu() {
     console.log("toggleMenu");
     // Kalder på #menu, skifter mellem at add og remove classen 'hidden'
     document.querySelector("#menu").classList.toggle("hidden");
-// Når #menu indeholder .hidden
+    // Når #menu indeholder .hidden
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-// hvis #menu indeholder .hidden er sand, vises burgermenu ikon
+    // hvis #menu indeholder .hidden er sand, vises burgermenu ikon
     if (erSkjult == true) {
         document.querySelector("#menuknap").textContent = "☰";
 
