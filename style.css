@@ -68,7 +68,7 @@ p {
     /*-- kan flyttes ift original placering */
     top: -50px;
     position: relative;
-    top: -40px;
+    top: -54px;
     font-weight: 300;
     background-color: #052829;
     color: white;
@@ -572,6 +572,10 @@ footer #ikoner img {
         grid-row-gap: 0px;
         grid-column-gap: 0;
         max-width: 1100px;
+    }
+
+    .navn  {
+        top: -55px;
     }
 
     article {
