@@ -158,10 +158,9 @@ header #menu a:last-child {
     /* gør at  den fylder hele sin bredde (100%) */
     position: relative;
     /*-- pga 'border' ændres placering ift andre a-elementer */
-    top: 260px;
+    top: 275px;
     display: block;
     position: relative;
-    margin-top: 100px;
     left: 10px;
     animation-name: pil_kf;
     animation-duration: 2s;
@@ -173,30 +172,17 @@ header #menu a:last-child {
 
 @keyframes pil_kf {
     0% {
-        top: 260px;
+        top: 300px;
         /* så */
     }
 
-    /* det */
-    /* kører */
     50% {
-        /* op */
-        top: 245px;
-        /* og */
+        top: 285px;
     }
 
-    /* ned */
-
-    top: 260px;
-
-}
-
-50% {
-    top: 245px;
-}
 
 100% {
-    top: 260px;
+    top: 300px;
 }
 }
 
@@ -351,9 +337,9 @@ article {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
-    font-size: 3.4rem;
+    font-size: 2.5rem;
     margin-bottom: -20px;
-    top: 30px;
+    top: 20px;
     color: white;
 }
 
@@ -535,6 +521,26 @@ footer #ikoner img {
     p.headline {
         top: -40px;
     }
+
+    .pil {
+    max-width: 50px;
+    margin: 0 auto;
+    display: block;
+    /* gør at  den fylder hele sin bredde (100%) */
+    position: relative;
+    /*-- pga 'border' ændres placering ift andre a-elementer */
+    top: 260px;
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    left: 10px;
+    animation-name: pil_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* kører i evighed */
+    animation-timing-function: ease-in-out;
+    transform: rotateZ(270deg);
+}
 
     /*------ section 2 DESKTOP --------*/
 
