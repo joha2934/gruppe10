@@ -2,6 +2,7 @@
 window.addEventListener("load", start);
 
 function start() {
+    // henter #menuknap, tildeler "click", går til toggleMenu
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
     // Henter knapper fra filtrering
     const filterKnapper = document.querySelectorAll(".filtrering button");
