@@ -140,6 +140,35 @@ header #menu a:last-child {
     position: absolute;
 }
 
+.pil {
+    max-width: 50px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 260px;
+    animation-name: pil_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pil_kf{
+    0% {
+        top: 260px;
+
+    }
+
+    50% {
+        top:245px;
+    }
+    100% {
+        top: 260px;
+    }
+}
+.pil img {
+    width: 50px;
+}
+
 /*------ section 1 MOBIL -------*/
 
 #section_one h2 {
