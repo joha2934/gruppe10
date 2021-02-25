@@ -226,7 +226,7 @@ header #menu a:last-child {
     /* gør at man sikrer den virker på alle browsere */
     text-align: center;
     color: #feb83500;
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 
@@ -280,7 +280,7 @@ button {
 
 #section_two {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
     column-gap: 20px;
     grid-row-gap: 20px;
     margin: 0 auto;
